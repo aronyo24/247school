@@ -8,3 +8,12 @@ export const fetchTeam = async () => {
   const res = await API.get("/teams/");
   return res.data;
 };
+export const trackVisitor = async (privateIp: string) => {
+  try {
+    await API.post("/track-visitor/", {
+      private_ip: privateIp,
+    });
+  } catch (error) {
+    console.error("Visitor tracking failed:", error);
+  }
+};

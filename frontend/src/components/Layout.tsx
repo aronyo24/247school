@@ -1,17 +1,16 @@
+import React from "react";
+import Header from "./Header";
+import { useTrackVisitor } from "@/hooks/useTrackVisitor";
+import { Outlet } from "react-router-dom";
 
-import React from 'react';
-import Header from './Header';
+const Layout: React.FC = () => {
+  useTrackVisitor();
 
-interface LayoutProps {
-  children: React.ReactNode;
-}
-
-const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div className="min-h-screen">
       <Header />
-      <main className="pt-0">
-        {children}
+      <main>
+        <Outlet />
       </main>
     </div>
   );

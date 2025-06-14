@@ -16,13 +16,15 @@ Including another URLconf
 """
 
 from django.contrib import admin
+from django.shortcuts import redirect
 from django.urls import path,include
 import nested_admin
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-
-    path('',include('schoolapp.urls')),
+    path('', lambda request: redirect('/admin/login/')),
+    # Redirect root to admin login
+    path('school/', include('schoolapp.urls')),
 ]
 
 
