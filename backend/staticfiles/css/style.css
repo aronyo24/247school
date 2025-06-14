@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+body,
+button {
+  font-family: "Inter", sans-serif;
+  background-color: #1c1f23;
+
+}
+:root {
+  --offcanvas-width: 270px;
+  --topNavbarHeight: 56px;
+}
+main {
+    background-color: #6d747a;
+    height: 100vh;
+}
+/* styles.css */
+i{
+
+   color: #08ee0c;
+    font-size: 20px;
+}
+/* Customizing Navbar text color and background color */
+.navbar {
+    background-color: #0e2238;
+    box-shadow: 0 2px 4px rgba(94, 252, 4, 0.96);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+.navbar {
+    background-color: #0e2238 !important; /* Change navbar background color */
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff !important;
+
+    font-size: 0.9rem;
+    text-transform: uppercase;/* Change text color */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #08ee0c !important; /* Change text color on hover */
+}
+
+
+.navbar-nav .nav-link:hover {
+    color: #08ee0c;
+}
+
+/* Adjusting spacing */
+.navbar-nav {
+    margin-right: auto;
+}
+
+/* Dropdown styling */
+.dropdown-menu {
+    background-color: #0e2238;
+    border: none;
+}
+
+.dropdown-item {
+    color: #ffffff;
+}
+
+.dropdown-item:hover {
+    background-color: #f1de0d;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.sidebar-nav {
+  width: var(--offcanvas-width);
+  background-color: #0e2238!important;
+}
+.sidebar-link {
+  display: flex;
+  align-items: center;
+}
+.sidebar-link .right-icon {
+  display: inline-flex;
+}
+.sidebar-link[aria-expanded="true"] .right-icon {
+  transform: rotate(180deg);
+}
+@media (min-width: 992px) {
+  body {
+    overflow: auto !important;
+  }
+  main {
+    margin-left: var(--offcanvas-width);
+  }
+  /* this is to remove the backdrop */
+  .offcanvas-backdrop::before {
+    display: none;
+  }
+  .sidebar-nav {
+    -webkit-transform: none;
+    transform: none;
+    visibility: visible !important;
+    height: calc(100% - var(--topNavbarHeight));
+    top: var(--topNavbarHeight);
+  }
+}
+.form-group{
+        margin-bottom: 0;
+}
+
+
+.wrapper1{
+    height: auto;
+    background-color: #0e2238;
+    border-radius: 6px;
+    border-color: #08ee0c;
+    color: white;
+}
+hr {
+    margin: 1px;
+    border: none;
+    border-top: 2px solid #08ee0c;
+    border-radius: 5px;
+
+}
+.btn{
+    background-color: #08ee0c;
+    color: #0c0505;
+}
+.btn:hover{
+    background-color: #0d6efd;
+    color: white;
+
+}
+
+
+
+
+
+
+
+
+
+
+.wrapper {
+  width: 400px;
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+.input-field {
+  position: relative;
+  border-bottom: 2px solid #ccc;
+  margin: 15px 0;
+}
+.input-field label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.15s ease;
+}
+.input-field input {
+  width: 100%;
+  height: 40px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #fff;
+}
+.input-field input:focus~label,
+.input-field input:valid~label {
+  font-size: 0.8rem;
+  top: 10px;
+  transform: translateY(-120%);
+}
+.forget {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 25px 0 35px 0;
+  color: #fff;
+}
+#remember {
+  accent-color: #fff;
+}
+.forget label {
+  display: flex;
+  align-items: center;
+}
+.forget label p {
+  margin-left: 8px;
+}
+.wrapper a {
+  color: #efefef;
+  text-decoration: none;
+}
+.wrapper a:hover {
+  text-decoration: underline;
+}
+button {
+  background: #fff;
+  color: #000;
+  font-weight: 600;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 16px;
+  border: 2px solid transparent;
+  transition: 0.3s ease;
+}
+button:hover {
+  color: #fff;
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.15);
+}
+.register {
+  text-align: center;
+  margin-top: 30px;
+  color: #fff;
+}
+

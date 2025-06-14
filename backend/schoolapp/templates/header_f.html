@@ -1,0 +1,35 @@
+        <nav class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
+                <div class="sidebar-sticky">
+                    <h5 class="mt-3">Content Management</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link text-primary" href="{% url 'admin:content_standard_changelist' %}">Standards</a>
+                            <a class="nav-link text-success ml-3" href="{% url 'admin:content_standard_add' %}">+ Add Standard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-primary" href="{% url 'admin:content_subject_changelist' %}">Subjects</a>
+                            <a class="nav-link text-success ml-3" href="{% url 'admin:content_subject_add' %}">+ Add Subject</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-primary" href="{% url 'admin:content_section_changelist' %}">Sections</a>
+                            <a class="nav-link text-success ml-3" href="{% url 'admin:content_section_add' %}">+ Add Section</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-primary" href="{% url 'admin:content_lesson_changelist' %}">Lessons</a>
+                            <a class="nav-link text-success ml-3" href="{% url 'admin:content_lesson_add' %}">+ Add Lesson</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-primary" href="{% url 'admin:content_subsection_changelist' %}">Subsections</a>
+                            <a class="nav-link text-success ml-3" href="{% url 'admin:content_subsection_add' %}">+ Add Subsection</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-primary" href="{% url 'admin:content_quiz_changelist' %}">Quizzes</a>
+                            <a class="nav-link text-success ml-3" href="{% url 'admin:content_quiz_add' %}">+ Add Quiz</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-primary" href="{% url 'admin:content_note_changelist' %}">Notes</a>
+                            <a class="nav-link text-success ml-3" href="{% url 'admin:content_note_add' %}">+ Add Note</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>

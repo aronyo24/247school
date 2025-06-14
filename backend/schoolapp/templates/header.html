@@ -1,0 +1,101 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+     <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet" type="text/css" media="all">
+    <link href="{% static "css/dataTables.bootstrap5.min.css" %}" rel="stylesheet" type="text/css" media="all">
+    <link href="{% static "css/style.css" %}" rel="stylesheet" type="text/css" media="all">
+    <link href="{% static "css/line-awesome.min.css" %}" rel="stylesheet" type="text/css" media="all">
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/jquery-3.5.1.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+
+
+  <title>Unity Agro</title>
+</head>
+
+<body>
+  <!-- top navigation bar -->
+
+
+
+  <div class="body">
+    <nav class="navbar navbar-expand-lg navbar-dark  fixed-top  ">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar"
+          aria-controls="offcanvasExample">
+          <span class="navbar-toggler-icon" data-bs-target="#sidebar"></span>
+        </button>
+        <a class="navbar-brand" href="#!">
+            <img src="{% static 'images/Ua_logo.png' %}" alt="" width="200" height="50">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topNavBar"
+          aria-controls="topNavBar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="topNavBar">
+
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle ms-2" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <i class="lar la-user-circle" style="font-size: 30px"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+
+                <li><a class="dropdown-item" href="#">{{ username }}</a></li>
+                <li>
+                     <a class="btn btn-danger" href="{% url 'subadmin_logout' %}">Logout</a>a>
+                </li>
+
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- top navigation bar -->
+    <!-- offcanvas -->
+    <div class="offcanvas offcanvas-start sidebar-nav bg-dark pb-4" tabindex="-1" id="sidebar">
+      <div class="offcanvas-body p-0">
+        <h5 class="mt-3">Content Management</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link text-primary" href="{% url 'admin:content_standard_changelist' %}">Standards</a>
+                            <a class="nav-link text-success ml-3" href="{% url 'admin:content_standard_add' %}">+ Add Standard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-primary" href="{% url 'admin:content_subject_changelist' %}">Subjects</a>
+                            <a class="nav-link text-success ml-3" href="{% url 'admin:content_subject_add' %}">+ Add Subject</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-primary" href="{% url 'admin:content_section_changelist' %}">Sections</a>
+                            <a class="nav-link text-success ml-3" href="{% url 'admin:content_section_add' %}">+ Add Section</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-primary" href="{% url 'admin:content_lesson_changelist' %}">Lessons</a>
+                            <a class="nav-link text-success ml-3" href="{% url 'admin:content_lesson_add' %}">+ Add Lesson</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-primary" href="{% url 'admin:content_subsection_changelist' %}">Subsections</a>
+                            <a class="nav-link text-success ml-3" href="{% url 'admin:content_subsection_add' %}">+ Add Subsection</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-primary" href="{% url 'admin:content_quiz_changelist' %}">Quizzes</a>
+                            <a class="nav-link text-success ml-3" href="{% url 'admin:content_quiz_add' %}">+ Add Quiz</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-primary" href="{% url 'admin:content_note_changelist' %}">Notes</a>
+                            <a class="nav-link text-success ml-3" href="{% url 'admin:content_note_add' %}">+ Add Note</a>
+                        </li>
+                    </ul>
+
+      </div>
+    </div>
+  </div>

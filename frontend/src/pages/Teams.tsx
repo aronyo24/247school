@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Mail, Linkedin, Github } from "lucide-react";
+import { Mail, Linkedin, Github, Globe } from "lucide-react";
 import { fetchTeam } from "@/services/api";
 
 interface TeamMember {
@@ -113,6 +113,17 @@ const Teams = () => {
                         title="GitHub"
                       >
                         <Github className="w-5 h-5 text-gray-600" />
+                      </a>
+                    )}
+                    {member.website && (
+                      <a
+                        href={member.website.startsWith("http") ? member.website : `https://${member.website}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-2 rounded-full bg-gray-600/10 hover:bg-gray-600/20 transition-colors"
+                        title="Website"
+                      >
+                        <Globe className="w-5 h-5 text-gray-600" />
                       </a>
                     )}
                   </div>
